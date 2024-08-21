@@ -22,3 +22,6 @@ con.commit()
 def root():
     return {"message": "Weather API"}
 
+@app.get("/get-weather")
+def get_weather(city: str, date: str):
+    return {"city": city, "date": date}
