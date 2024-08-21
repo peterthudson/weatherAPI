@@ -75,12 +75,12 @@ Where {CITY} is the name of the city and {DATE} is the date in the format YYYY-M
 
 The API will return information in teh following format:
 
-{
-"minTemp": float,
-"maxTemp": float,
-"avgTemp": float,
-"humidity": float
-}
+    {
+    "minTemp": float,
+    "maxTemp": float,
+    "avgTemp": float,
+    "humidity": float
+    }
 
 More information about the API endpoints can be found at http://127.0.0.1:8000/docs
 
@@ -96,12 +96,12 @@ There is also an API test. This test contains a set of known historical data fro
 
 Example of a unit test
 
-def test_calculate_avg_temp():
-    # Test the calculate avg temp function
-    assert resources.calculate_avg_temp(10, 20) == 15
-    assert resources.calculate_avg_temp(10, 20) != 10
-    assert resources.calculate_avg_temp(50, 30) == 40
-    assert resources.calculate_avg_temp(10, 20) != 100
+    def test_calculate_avg_temp():
+        # Test the calculate avg temp function
+        assert resources.calculate_avg_temp(10, 20) == 15
+        assert resources.calculate_avg_temp(10, 20) != 10
+        assert resources.calculate_avg_temp(50, 30) == 40
+        assert resources.calculate_avg_temp(10, 20) != 100
 
 ## Authors
 
