@@ -12,6 +12,18 @@ openWeatherAggregate = 'https://api.openweathermap.org/data/3.0/onecall/day_summ
 
 
 #### COMMON FUNCTIONS ####
+def error_handling(status_code):
+    return {
+        400: 'Invalid value(s) given. Latitude or Longitude value should be between -90 and +90 and Date should be in the format YYYY-MM-DD',
+        401: 'Invalid API Key'
+    }[status_code]
+
+def json_is_empty(jsonObject):
+    return len(jsonObject) == 2
+
+def calculate_avg_temp(temp1, temp2):
+    # Return the average of given temperatures
+    return statistics.mean([float(temp1), float(temp2)])
 
 def db_confirm_database_exists(cur):
     # Return True if the database exists
