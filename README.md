@@ -103,6 +103,14 @@ Example of a unit test
         assert resources.calculate_avg_temp(50, 30) == 40
         assert resources.calculate_avg_temp(10, 20) != 100
 
+# Future Changes
+
+While I achieved all the requirements and added in database functionality as an extra, there are changes I would make going forward:
+
+1) I feel like more robust error handline would be a valuable addition. currently this API checks error codes and returns custom messages but in future development, I would have this API return the code and exact message provided by the [OpenWeather APIs](https://openweathermap.org/api).
+
+2) I would implemet CI and deploy the API to a hosting platform where it could run indepently. While I have experience doing this, my experience is not with Python and it was with provided infrastructure. I would commit to researching how to achieve this and implement it.
+
 ## Authors
 
   - **Peter Hudson**
