@@ -29,3 +29,20 @@ def test_calculate_avg_temp():
     assert resources.calculate_avg_temp(10, 20) != 10
     assert resources.calculate_avg_temp(50, 30) == 40
     assert resources.calculate_avg_temp(10, 20) != 100
+
+def test_api():
+    # API unit test.
+    # Calls API endpoint and compares returned values against expected values
+    expectedMax = 8.67
+    expectedMin = 6.17
+    expectedAvg = 7.42
+    expectedHum = 87.05
+
+    endpoint = "http://127.0.0.1:8000/get-weather?city=London&date=2000-01-01"
+
+    result = requests.get(endpoint).json()
+
+    assert result["min"] == expectedMin
+    assert result["max"] == expectedMax
+    assert result["avg"] == expectedAvg
+    assert result["hum"] == expectedHum
