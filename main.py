@@ -25,3 +25,22 @@ def root():
 @app.get("/get-weather")
 def get_weather(city: str, date: str):
     return {"city": city, "date": date}
+
+    # Check that there is an entry in the database for this city and date.
+    # If there is, query it and return those results
+
+    # If there isn't, get the data and create a database entry
+
+    # get data from GeoCoding API
+
+    # Extract lat and long
+
+    # Get Weather data from Daily Aggregation API
+
+    # Extract Humidity, Max Temperature, and Min Temperature 
+
+    # Create Database Entry
+
+    # Calculate Average Temp
+
+    # Return Results
